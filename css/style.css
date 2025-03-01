@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: radial-gradient( circle 710px at 5.2% 7.2%,  rgba(37,89,222,1) 0%, rgba(37,89,222,1) 7.5%, rgba(4,4,29,1) 90.7% );
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(transparent, rgba(37,89,222,1) );
+    border-radius: 4px;
+}
+
+
+/* Container */
+.container {
+max-width: 400px;
+width: 90%;
+background: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+/* Uniform styling for all input fields, select, and button */
+input, select, button, input[type="file"] {
+width: 100%;
+max-width: 350px;
+padding: 12px;
+border: 2px solid rgba(37,89,222,1);
+border-radius: 5px;
+font-size: 16px;
+outline: none;
+transition: all 0.3s ease-in-out;
+display: block;
+margin: 10px 0;
+box-sizing: border-box; /* Prevents elements from exceeding the container width */
+}
+
+/* Textbox */
+input[type="text"] {
+background: #f9f9f9;
+color: #333;
+}
+
+input[type="text"]:focus {
+border-color: rgba(4,4,29,1);
+box-shadow: 0 0 5px rgba(37,89,222,0.7);
+}
+
+/* Dropdown */
+select {
+background: #fff;
+color: #333;
+cursor: pointer;
+appearance: none;
+}
+
+/* Button */
+button {
+background: radial-gradient(circle, rgba(37,89,222,1) 0%, rgba(4,4,29,1) 90%);
+color: white;
+font-weight: bold;
+text-transform: uppercase;
+cursor: pointer;
+transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+transform: scale(1.03);
+box-shadow: 0 4px 10px rgba(37,89,222,0.5);
+}
+
+/* File selection */
+input[type="file"] {
+background: rgba(37,89,222,0.1);
+color: rgba(37,89,222,1);
+border: 2px dashed rgba(37,89,222,1);
+text-align: center;
+cursor: pointer;
+}
+
+input[type="file"]:hover {
+background: rgba(37,89,222,0.2);
+border-color: rgba(4,4,29,1);
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+.container {
+width: 95%;
+padding: 15px;
+}
+
+input, select, button, input[type="file"] {
+max-width: 100%;
+padding: 10px;
+}
+}
+
+.animate-button {
+    animation: fadeInButton 0.5s ease-in-out;
+}
+h2
+{
+    background: radial-gradient(circle 710px at 5.2% 7.2%, rgba(37,89,222,1) 0%, rgba(37,89,222,1) 7.5%, rgba(4,4,29,1) 90.7%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+#qrcode {
+    margin-top: 20px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+#qrcode.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+footer {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+text-align: center;
+font-weight: bold;
+color: white;
+z-index: 1000;
+}
+
+.footer-content {
+background: linear-gradient(90deg,  rgba(4,4,29,1) 30%,rgba(37,89,222,1) 100%);
+padding: 20px 0;
+position: relative;
+}
+
+footer p {
+margin: 0;
+font-size: 14px;
+text-transform: uppercase;
+letter-spacing: 1px;
+transition: color 0.3s ease-in-out;
+}
+
+footer p:hover {
+color: #FFD700; /* Gold hover effect */
+text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+}
+
+/* Responsive Footer */
+@media (max-width: 500px) {
+footer p {
+font-size: 12px;
+}
+}
+    
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInButton {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

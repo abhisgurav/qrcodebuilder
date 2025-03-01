@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Builder</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./favicon/favicon.ico" type="icon/ico">
+</head>
+<body>
+    <div class="container">
+        <h2>QR Code Builder</h2>
+        <input type="text" id="text" placeholder="Enter text or URL">
+        <select id="qrType">
+            <option value="" selected disabled>Select QR Code Method</option>
+            <option value="withoutImage">QR Code Only</option>
+            <option value="withImage">QR Code with Image</option>
+        </select>
+        <input type="file" id="imageInput" accept="image/*" style="display: none;">
+        <button id="generateBtn" onclick="generateQR()">Generate QR Code</button>
+        <div id="qrcode"></div>
+    </div>
+    <footer>
+        
+        <div class="footer-content">
+            <p>Developed by AbhiSGurav</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        function ctrlShiftKey(e, keyCode) {
+            return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+        }
+
+        document.onkeydown = (e) => {
+            // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+            if (
+                event.keyCode === 123 ||
+                ctrlShiftKey(e, 'I') ||
+                ctrlShiftKey(e, 'J') ||
+                ctrlShiftKey(e, 'C') ||
+                (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+            )
+                return false;
+        };
+    </script>
+</body>
+</html>
