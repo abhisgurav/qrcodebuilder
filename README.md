@@ -40,7 +40,7 @@ QR Code Builder
 
 Clone this repository:
 
-    git clone https://github.com/abhisgurav/QRbuilder.git
+    git clone https://github.com/abhisgurav/qrcodebuilder.git
 
 Open QRBuilder.html in your browser.
 
